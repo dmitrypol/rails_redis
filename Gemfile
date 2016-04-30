@@ -61,8 +61,14 @@ gem 'redis-browser'
 gem 'redis-dump'
 gem 'rack-mini-profiler'
 
+gem 'faker'
+gem 'simple_form'
+gem 'draper'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+end
+
 # gem ‘counter_cultture’
 # gem ‘active_job_status’
-
-gem 'bootstrap'
-gem 'faker'

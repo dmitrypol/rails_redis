@@ -1,5 +1,15 @@
+GIT
+  remote: git://github.com/rails-api/active_model_serializers.git
+  revision: 0433869cc1d59af04c115feff1504b4e8b22eef0
+  specs:
+    active_model_serializers (0.10.0.rc5)
+      actionpack (>= 4.0)
+      activemodel (>= 4.0)
+      railties (>= 4.0)
+
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionmailer (4.2.6)
       actionpack (= 4.2.6)
@@ -37,14 +47,9 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
-    autoprefixer-rails (6.3.6)
-      execjs
     backports (3.6.8)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap (4.0.0.alpha3)
-      autoprefixer-rails (>= 6.0.3)
-      sass (>= 3.4.19)
     builder (3.2.2)
     byebug (8.2.5)
     coffee-rails (4.1.1)
@@ -57,6 +62,11 @@ GEM
     concurrent-ruby (1.0.1)
     connection_pool (2.2.0)
     debug_inspector (0.0.2)
+    draper (2.1.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0)
     drydock (0.6.9)
     erubis (2.7.0)
     execjs (2.6.0)
@@ -104,6 +114,9 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.6)
       sprockets-rails
+    rails-assets-bootstrap (3.3.6)
+      rails-assets-jquery (>= 1.9.1, < 3)
+    rails-assets-jquery (2.2.3)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -139,6 +152,7 @@ GEM
       yajl-ruby (>= 0.1)
     redis-namespace (1.5.2)
       redis (~> 3.0, >= 3.0.4)
+    request_store (1.3.1)
     rufus-scheduler (3.2.0)
     sass (3.4.22)
     sass-rails (5.0.4)
@@ -162,6 +176,9 @@ GEM
       sidekiq (>= 2.16.0)
     sidekiq-statistic (1.2.0)
       sidekiq (>= 3.3.4, < 5)
+    simple_form (3.2.1)
+      actionpack (> 4, < 5.1)
+      activemodel (> 4, < 5.1)
     sinatra (1.4.7)
       rack (~> 1.5)
       rack-protection (~> 1.4)
@@ -207,15 +224,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap
+  active_model_serializers!
   byebug
   coffee-rails (~> 4.1.0)
+  draper
   faker
   hiredis
   jbuilder (~> 2.0)
   jquery-rails
   rack-mini-profiler
   rails (= 4.2.6)
+  rails-assets-bootstrap!
   readthis
   redis
   redis-browser
@@ -226,6 +245,7 @@ DEPENDENCIES
   sidekiq-cron
   sidekiq-failures
   sidekiq-statistic
+  simple_form
   sinatra
   spring
   sqlite3

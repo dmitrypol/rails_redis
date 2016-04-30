@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user), class: 'btn btn-info' %> |
+<%= link_to 'Back', users_path, class: 'btn btn-info' %>
+
+<hr>
+
+<h3> Cached method calls </h3>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Name decorated:</strong>
+  <%= @user.name_decorated %>
+</p>

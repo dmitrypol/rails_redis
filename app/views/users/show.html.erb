@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<%# This will cache portion of the view  %>
+<% cache [@user] do %>
+
 <p>
   <strong>First name:</strong>
   <%= @user.first_name %>
@@ -14,6 +17,9 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+
+
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user), class: 'btn btn-info' %> |
 <%= link_to 'Back', users_path, class: 'btn btn-info' %>

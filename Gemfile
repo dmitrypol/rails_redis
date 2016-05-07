@@ -60,6 +60,7 @@ gem 'sinatra'
 gem 'redis-browser'
 gem 'redis-dump'
 gem 'rack-mini-profiler'
+gem 'logster'
 
 gem 'faker'
 gem 'simple_form'

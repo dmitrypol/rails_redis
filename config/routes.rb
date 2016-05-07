@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   mount RedisBrowser::Web => '/redis'
 
+  mount Logster::Web => "/logs"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

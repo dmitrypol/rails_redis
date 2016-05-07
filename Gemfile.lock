@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rails-api/active_model_serializers.git
-  revision: 0433869cc1d59af04c115feff1504b4e8b22eef0
+  revision: 2b4989935130732d59d7cc1b6228d4a447dd5071
   specs:
     active_model_serializers (0.10.0.rc5)
       actionpack (>= 4.0)
@@ -59,7 +59,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    concurrent-ruby (1.0.1)
+    concurrent-ruby (1.0.2)
     connection_pool (2.2.0)
     debug_inspector (0.0.2)
     draper (2.1.0)
@@ -84,6 +84,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    logster (1.2.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -93,7 +94,7 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
-    multi_json (1.11.3)
+    multi_json (1.12.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     rack (1.6.4)
@@ -153,7 +154,7 @@ GEM
     redis-namespace (1.5.2)
       redis (~> 3.0, >= 3.0.4)
     request_store (1.3.1)
-    rufus-scheduler (3.2.0)
+    rufus-scheduler (3.2.1)
     sass (3.4.22)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -164,7 +165,7 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    sidekiq (4.1.1)
+    sidekiq (4.1.2)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
       redis (~> 3.2, >= 3.2.1)
@@ -232,6 +233,7 @@ DEPENDENCIES
   hiredis
   jbuilder (~> 2.0)
   jquery-rails
+  logster
   rack-mini-profiler
   rails (= 4.2.6)
   rails-assets-bootstrap!

@@ -29,5 +29,7 @@ To run the CacheWarmerJob   rails r CacheWarmerJob.perform_now
 
 To run the WeatherService   rails r "WeatherService.new.perform(94158)"
 
+To run the GithubService   rails r "GithubService.new('dhh').perform"
+
 Also look at show.html.erb, user.rb, user_decorator.rb, user_serializer.rb and cache_controller.rb
 

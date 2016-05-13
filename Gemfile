@@ -45,7 +45,7 @@ group :development do
   gem 'spring'
 end
 
-# => 
+# =>
 
 gem 'redis'
 gem 'hiredis'
@@ -62,6 +62,8 @@ gem 'redis-dump'
 gem 'rack-mini-profiler'
 gem 'newrelic_rpm'
 gem 'logster'
+#gem 'cache_method'
+gem 'http'
 
 gem 'faker'
 gem 'simple_form'

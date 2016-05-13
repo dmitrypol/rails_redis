@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :cache, only: [:index, :show]
   resources :users
   root 'users#index'
 

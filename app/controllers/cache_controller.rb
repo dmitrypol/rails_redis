@@ -11,13 +11,13 @@ class CacheController < ApplicationController
 private
 
 	def index_cache
-	  Rails.cache.fetch("#{self.class.name}/#{__method__}", expires_in: 10.minutes) do
+	  Rails.cache.fetch([self.class.name, __method__], expires_in: 10.minutes) do
 			"cached #{self.class.name}/#{__method__}"
 	  end
 	end
 
 	def show_cache
-	  Rails.cache.fetch("#{self.class.name}/#{__method__}/#{params[:id]}", expires_in: 10.minutes) do
+	  Rails.cache.fetch([self.class.name, __method__, params[:id] ], expires_in: 10.minutes) do
 			"cached #{self.class.name}/#{__method__}/#{params[:id]}"
 	  end
 	end

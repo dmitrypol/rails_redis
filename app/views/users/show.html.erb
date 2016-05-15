@@ -59,5 +59,6 @@
 
 <p>
   <strong>Weather:</strong>
-  <%= @weather_data['weather'].first['description'] %>
+  <%= @weather_data['weather'].first['description'] if @weather_data['weather'] %>
+  <%= 'need to get openweathermap.org API key' unless @weather_data['weather'] %>
 </p>

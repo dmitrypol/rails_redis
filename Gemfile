@@ -71,6 +71,11 @@ gem 'simple_form'
 gem 'draper'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
+group :development do
+  gem 'quiet_assets'
+  gem 'better_errors'
+end
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
 end

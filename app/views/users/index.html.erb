@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<% # Russian doll caching, creating a unique key %>
+<% cache [controller_name, action_name, @users.map(&:id), @users.maximum(:updated_at) ] do %>
+
 <h1>Listing Users</h1>
 
 <table class='table table-bordered'>
@@ -48,3 +51,5 @@
 <%= link_to 'Redis Browser', redis_browser_web_path, class: 'btn btn-success btn-lg', target: '_blank' %>
 <%= link_to 'Logster', logster_web_path, class: 'btn btn-success btn-lg', target: '_blank' %>
 <%= link_to 'New Relic', '/newrelic', class: 'btn btn-success btn-lg', target: '_blank' %>
+
+<% end %>

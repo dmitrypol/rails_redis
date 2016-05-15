@@ -6,7 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+github_logins = ['dhh', 'antirez', 'matz', 'tenderlovej', 'josevalim', 'wycats', 'schneems', 'smartinez87', 'durran', 'mperham']
 User.delete_all
 10.times do |i|
-	User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email )
+	User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, zipcode: Faker::Address.zip, github_login: github_logins[i] )
 end

@@ -8,6 +8,8 @@
       <th>First name</th>
       <th>Last name</th>
       <th>Email</th>
+      <th>Zipcode</th>
+      <th>Github Login</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +17,14 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.email %></td>
+        <% # creates separate keys for each record, can be busted indivdiually %>
+        <% cache [user] do %>      
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.zipcode %></td>
+          <td><%= user.github_login %></td>
+        <% end %>
         <td><%= link_to 'Show', user, class: 'btn btn-info btn-sm' %></td>
         <td><%= link_to 'Edit', edit_user_path(user), class: 'btn btn-info btn-sm' %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
@@ -29,6 +36,11 @@
 <br>
 
 <%= link_to 'New User', new_user_path, class: 'btn btn-info' %>
+
+<hr>
+
+<%= link_to 'Cached Controller', '/cache', class: 'btn btn-success btn-lg', target: '_blank' %>
+<%= link_to 'Users JSON view', '/users.json', class: 'btn btn-success btn-lg', target: '_blank' %>
 
 <hr>
 

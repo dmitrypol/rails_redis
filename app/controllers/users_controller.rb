@@ -10,6 +10,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    # call service objects to fetch data from external APIs
+    @github_data = JSON.parse GithubService.new(@user).perform
+    @weather_data = JSON.parse WeatherService.new.perform(@user.zipcode)
   end
 
   # GET /users/new
@@ -69,6 +72,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email)
+      params.require(:user).permit(:first_name, :last_name, :email, :zipcode, :github_login)
     end
 end

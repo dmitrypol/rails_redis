@@ -18,11 +18,21 @@
   <%= @user.email %>
 </p>
 
+<p>
+  <strong>Zipcode:</strong>
+  <%= @user.zipcode %>
+</p>
+
+<p>
+  <strong>Github Login:</strong>
+  <%= @user.github_login %>
+</p>
 
 <% end %>
 
 <%= link_to 'Edit', edit_user_path(@user), class: 'btn btn-info' %> |
-<%= link_to 'Back', users_path, class: 'btn btn-info' %>
+<%= link_to 'Back', users_path, class: 'btn btn-info' %> | 
+<%= link_to 'JSON', user_path(@user) + '.json', class: 'btn btn-info' %>
 
 <hr>
 
@@ -36,4 +46,18 @@
 <p>
   <strong>Name decorated:</strong>
   <%= @user.name_decorated %>
+</p>
+
+<hr>
+
+<h3> Data cached from external APIs</h3>
+
+<p>
+  <strong>Github Avatar:</strong>
+  <%= image_tag @github_data['avatar_url'], size: "100", alt: @user.name %>
+</p>
+
+<p>
+  <strong>Weather:</strong>
+  <%= @weather_data['weather'].first['description'] %>
 </p>

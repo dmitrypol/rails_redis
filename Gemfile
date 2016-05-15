@@ -64,6 +64,7 @@ gem 'newrelic_rpm'
 gem 'logster'
 #gem 'cache_method'
 gem 'http'
+gem 'figaro'
 
 gem 'faker'
 gem 'simple_form'

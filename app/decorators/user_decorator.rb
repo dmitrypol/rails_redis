@@ -2,6 +2,7 @@ class UserDecorator < Draper::Decorator
   delegate_all
 
   def name_decorated
+    # adding class and method names to create unique cache_key
   	Rails.cache.fetch("#{cache_key}/#{self.class.name}/#{__method__}") do
   	  "#{name} decorated"
   	end

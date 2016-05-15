@@ -15,6 +15,8 @@ rails s
 
 http://localhost:3000/
 
+To get weather go to http://openweathermap.org/, sing up for API key and put it in application.yml file.  App uses Figaro gem
+
 http://localhost:3000/cache and http://localhost:3000/cache/1 - cached controller actions
 
 http://localhost:3000/redis - view stuff in Redis
@@ -31,5 +33,4 @@ To run the WeatherService   rails r "WeatherService.new.perform(94158)"
 
 To run the GithubService   rails r "GithubService.new('dhh').perform"
 
-Also look at show.html.erb, user.rb, user_decorator.rb, user_serializer.rb and cache_controller.rb
-
+Also look at index.html.erb, show.html.erb, user.rb, user_decorator.rb, user_serializer.rb and cache_controller.rb

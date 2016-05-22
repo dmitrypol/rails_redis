@@ -50,6 +50,8 @@ end
 gem 'redis'
 gem 'hiredis'
 gem 'readthis'
+gem 'redis-dump'
+gem 'redis-namespace'
 
 gem 'sidekiq'
 gem 'sidekiq-cron'
@@ -58,17 +60,15 @@ gem 'sidekiq-statistic'
 
 gem 'sinatra'
 gem 'redis-browser'
-gem 'redis-dump'
-gem 'redis-namespace'
 
 gem 'rack-mini-profiler'
 gem 'newrelic_rpm'
 gem 'logster'
-#gem 'cache_method'
 gem 'http'
 gem 'figaro'
 gem 'roo'
-gem 'axlsx'
+gem 'axlsx_rails'
+gem 'zip'
 gem 'faker'
 gem 'simple_form'
 gem 'draper'
@@ -85,3 +85,4 @@ end
 
 # gem ‘counter_cultture’
 # gem ‘active_job_status’
+# gem 'cache_method'

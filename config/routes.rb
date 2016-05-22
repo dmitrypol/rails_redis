@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :user_import, only: [:new, :create]
+
   resources :cache, only: [:index, :show]
   resources :users
   root 'users#index'

@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <% # Russian doll caching, creating a unique key %>
 <% cache [controller_name, action_name, @users.map(&:id), @users.maximum(:updated_at) ] do %>
 
@@ -42,8 +40,9 @@
 
 <hr>
 
-<%= link_to 'Cached Controller', '/cache', class: 'btn btn-success btn-lg', target: '_blank' %>
-<%= link_to 'Users JSON view', '/users.json', class: 'btn btn-success btn-lg', target: '_blank' %>
+<%= link_to 'Cached Controller', cache_index_path, class: 'btn btn-success btn-lg', target: '_blank' %>
+<%= link_to 'Users JSON View', '/users.json', class: 'btn btn-success btn-lg', target: '_blank' %>
+<%= link_to 'User Import', new_user_import_path, class: 'btn btn-success btn-lg' %>
 
 <hr>
 

@@ -1,0 +1,14 @@
+<h1>User Import</h1>
+
+<h4>Look at UserImportService.rb and UserImportJob.rb</h4>
+
+<%= form_tag user_import_index_path, multipart: true do %>
+  <%= file_field_tag :file, required: 'required' %>
+  <br>
+  <%= submit_tag 'Import', :class => 'btn btn-primary' %>
+<% end %>
+
+<br>
+
+<%= link_to 'Back', users_path, class: 'btn btn-info' %>
+

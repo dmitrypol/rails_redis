@@ -1,0 +1,6 @@
+---
+:concurrency: 1
+:logfile: log/sidekiq.log
+:queues:
+  - [high, 4]
+  - default

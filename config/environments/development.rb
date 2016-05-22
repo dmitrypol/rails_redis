@@ -44,4 +44,8 @@ Rails.application.configure do
   config.redis_host = 'localhost'
   config.cache_store = :readthis_store, { expires_in: 1.hour, namespace: 'mycache', redis: { host: config.redis_host, port: 6379, db: 0 }, driver: :hiredis }
 
+  config.active_job.queue_adapter = :sidekiq
+
+  REDIS_BATCHES = Redis::Namespace.new(:batches, redis: Redis.new(host: Rails.application.config.redis_host, port: 6379, db: 0, driver: :hiredis) )
+
 end

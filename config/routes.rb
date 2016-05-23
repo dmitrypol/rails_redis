@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :user_import, only: [:new, :create]
+  resources :user_import, only: [:index, :create]
 
   resources :cache, only: [:index, :show]
   resources :users

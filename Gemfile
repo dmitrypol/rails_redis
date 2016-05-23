@@ -84,5 +84,5 @@ source 'https://rails-assets.org' do
 end
 
 # gem ‘counter_cultture’
-# gem ‘active_job_status’
+# gem 'active_job_status'
 # gem 'cache_method'

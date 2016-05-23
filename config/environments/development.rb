@@ -48,4 +48,6 @@ Rails.application.configure do
 
   REDIS_BATCHES = Redis::Namespace.new(:batches, redis: Redis.new(host: Rails.application.config.redis_host, port: 6379, db: 0, driver: :hiredis) )
 
+  Logster.store = Logster::RedisStore.new(Redis.new(host: Rails.application.config.redis_host, port: 6379, db: 1, driver: :hiredis))
+
 end

@@ -19,7 +19,7 @@
     <% @users.each do |user| %>
       <tr>
         <% # creates separate keys for each record, can be busted indivdiually %>
-        <% cache [user] do %>      
+        <% cache [user] do %>
           <td><%= user.first_name %></td>
           <td><%= user.last_name %></td>
           <td><%= user.email %></td>
@@ -42,7 +42,7 @@
 
 <%= link_to 'Cached Controller', cache_index_path, class: 'btn btn-success btn-lg', target: '_blank' %>
 <%= link_to 'Users JSON View', '/users.json', class: 'btn btn-success btn-lg', target: '_blank' %>
-<%= link_to 'User Import', new_user_import_path, class: 'btn btn-success btn-lg' %>
+<%= link_to 'User Import', user_import_index_path, class: 'btn btn-success btn-lg' %>
 
 <hr>
 

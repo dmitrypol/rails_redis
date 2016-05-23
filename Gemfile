@@ -73,6 +73,7 @@ gem 'faker'
 gem 'simple_form'
 gem 'draper'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
+gem 'geocoder'
 
 group :development do
   gem 'quiet_assets'

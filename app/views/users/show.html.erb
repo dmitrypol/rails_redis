@@ -26,10 +26,20 @@
   <%= @user.github_login %>
 </p>
 
+<p>
+  <strong>Latitude:</strong>
+  <%= @user.lat %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @user.lng %>
+</p>
+
 <% end %>
 
 <%= link_to 'Edit', edit_user_path(@user), class: 'btn btn-info' %> |
-<%= link_to 'Back', users_path, class: 'btn btn-info' %> | 
+<%= link_to 'Back', users_path, class: 'btn btn-info' %> |
 <%= link_to 'JSON', user_path(@user) + '.json', class: 'btn btn-info' %>
 
 <hr>

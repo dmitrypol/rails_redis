@@ -26,24 +26,22 @@ private
     REDIS_BATCHES.rpush(@batch_success, row.to_json) if result == 'success'
     REDIS_BATCHES.rpush(@batch_error, row.to_json) if result == 'error'
     REDIS_BATCHES.decr(@batch_counter)
-    after_complete_batch
+    after_complete_batch unless REDIS_BATCHES.get(@batch_counter).to_i > 0
   rescue => e
     Rails.logger.error "#{self.name}.#{__method__} - #{e}"
   end
 
   def get_batch_params batch_id
-    @batch_id = batch_id
-    @batch_counter =  "#{@batch_id}:counter"
-    @batch_success = "#{@batch_id}:success"
-    @batch_error = "#{@batch_id}:error"
-    @batch_owner_id =  "#{@batch_id}:owner_id"
-    @batch_header = "#{@batch_id}:header"
+    @batch_id       = batch_id
+    @batch_counter  = "#{@batch_id}:counter"
+    @batch_success  = "#{@batch_id}:success"
+    @batch_error    = "#{@batch_id}:error"
+    @batch_owner_id = "#{@batch_id}:owner_id"
+    @batch_header   = "#{@batch_id}:header"
   end
 
   # => check if batch_size is 0, last job completed
   def after_complete_batch
-    return if REDIS_BATCHES.get(@batch_counter).to_i <= 0
-
     # => create output file
     @output_file = "tmp/#{@batch_id.split('_').first}.xlsx"
     package = Axlsx::Package.new
@@ -59,8 +57,8 @@ private
 
     # => send file to batch owner
     package.serialize (@output_file)
-    #msg = "#{REDIS_BATCHES.llen(@batch_success)} success, #{REDIS_BATCHES.llen(@batch_error)} errors"
-    # => lookup @batch_owner_id
+    subject = "#{REDIS_BATCHES.llen(@batch_success)} success, #{REDIS_BATCHES.llen(@batch_error)} errors"
+    # => lookup @batch_owner_id and send email
 
     # => set expiration for batch keys
     [@batch_counter, @batch_size, @batch_owner_id, @batch_success, @batch_error, @batch_header].each do |key|

@@ -52,6 +52,7 @@ gem 'hiredis'
 gem 'readthis'
 gem 'redis-dump'
 gem 'redis-namespace'
+gem 'redis-objects'
 
 gem 'sidekiq'
 gem 'sidekiq-cron'

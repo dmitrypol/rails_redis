@@ -6,8 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-github_logins = ['dhh', 'antirez', 'matz', 'tenderlovej', 'josevalim', 'wycats', 'schneems', 'smartinez87', 'durran', 'mperham']
+Article.delete_all
 User.delete_all
+
+github_logins = ['dhh', 'antirez', 'matz', 'tenderlove', 'josevalim', 'wycats', 'schneems', 'smartinez87', 'durran', 'mperham']
 10.times do |i|
 	User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, zipcode: Faker::Address.zip, github_login: github_logins[i] )
+end
+
+30.times do |i|
+	Article.create(title: Faker::Lorem.sentence, body: Faker::Lorem.paragraphs(3), user: User.all.sample)
 end

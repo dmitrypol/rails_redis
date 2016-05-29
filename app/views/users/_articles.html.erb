@@ -1,0 +1,30 @@
+<hr>
+
+<h3>Articles</h3>
+
+<table class='table table-bordered'>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>User</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user.articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.body %></td>
+        <td><%= article.user.name %></td>
+        <td><%= link_to 'Edit', edit_user_article_path(@user, article), class: 'btn btn-info btn-sm' %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', new_user_article_path(@user), class: 'btn btn-info' %>

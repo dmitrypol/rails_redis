@@ -11,9 +11,9 @@ User.delete_all
 
 github_logins = ['dhh', 'antirez', 'matz', 'tenderlove', 'josevalim', 'wycats', 'schneems', 'smartinez87', 'durran', 'mperham']
 10.times do |i|
-	User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, zipcode: Faker::Address.zip, github_login: github_logins[i] )
+	User.new(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, zipcode: Faker::Address.zip, github_login: github_logins[i] ).save!
 end
 
 30.times do |i|
-	Article.create(title: Faker::Lorem.sentence, body: Faker::Lorem.paragraphs(3), user: User.all.sample)
+	Article.new(title: Faker::Lorem.sentence, body: Faker::Lorem.paragraph, user: User.all.sample).save!
 end

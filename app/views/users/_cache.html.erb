@@ -1,0 +1,28 @@
+<hr>
+
+<h3> Cached method calls </h3>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Name decorated:</strong>
+  <%= @user.name_decorated %>
+</p>
+
+<hr>
+
+<h3> Data cached from external APIs</h3>
+
+<p>
+  <strong>Github Avatar:</strong>
+  <%= image_tag @github_data['avatar_url'], size: "100", alt: @user.name %>
+</p>
+
+<p>
+  <strong>Weather:</strong>
+  <%= @weather_data['weather'].first['description'] if @weather_data['weather'] %>
+  <%= 'need to get openweathermap.org API key' unless @weather_data['weather'] %>
+</p>

@@ -1,0 +1,38 @@
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @article.body %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @article.user.name %>
+</p>
+
+<%= link_to 'Back', user_path(@article.user), class: 'btn btn-info' %>
+
+<hr>
+
+<h4>These stats come for redis-objects daily_views hash_key</h4>
+
+<table class='table table-bordered'>
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Views</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @article.daily_views.each do |dv| %>
+      <tr>
+        <td><%= dv.first %></td>
+        <td><%= dv.second %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

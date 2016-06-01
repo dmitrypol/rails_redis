@@ -17,3 +17,8 @@ end
 30.times do |i|
 	Article.new(title: Faker::Lorem.sentence, body: Faker::Lorem.paragraph, user: User.all.sample).save!
 end
+
+# => generate stats in redis-objects
+1000.times do |i|
+	ArticleDailyViewsJob.perform_now(Article.all.sample, Time.now - rand(0..1000000))
+end

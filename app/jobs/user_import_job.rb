@@ -34,6 +34,7 @@ private
   def get_batch_params batch_id
     @batch_id       = batch_id
     @batch_counter  = "#{@batch_id}:counter"
+    @batch_size     = "#{@batch_id}:size"
     @batch_success  = "#{@batch_id}:success"
     @batch_error    = "#{@batch_id}:error"
     @batch_owner_id = "#{@batch_id}:owner_id"

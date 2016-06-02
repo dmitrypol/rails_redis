@@ -50,4 +50,13 @@ Rails.application.configure do
 
   Logster.store = Logster::RedisStore.new(Redis.new(host: Rails.application.config.redis_host, port: 6379, db: 1, driver: :hiredis))
 
+  settings = {"connections"=>{
+    "default"=>{"url"=>"redis://#{config.redis_host}:6379/0"},
+    "db1"    =>{"url"=>"redis://#{config.redis_host}:6379/1"},
+    }}
+  RedisBrowser.configure(settings)
+
+  MONGO_CLIENT = Mongo::Client.new([ '127.0.0.1:27017' ], database: 'rails_redis')
+  ARTICLE_DAILY_VIEWS = MONGO_CLIENT[:article_daily_views]
+
 end

@@ -11,4 +11,9 @@ class Article < ActiveRecord::Base
 	after_destroy do 			user.redobj_articles_count.decr	 	end
   #after_save do					self.redobj_attr = self.attributes 	end
 
+  # query mongo collection for stats for this article by article_id
+  def mongo_daily_views
+  	ARTICLE_DAILY_VIEWS.find(:article_id => id).projection(:article_id => 0, :_id => 0).first
+  end
+
 end

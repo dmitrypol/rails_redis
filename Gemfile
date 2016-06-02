@@ -76,6 +76,8 @@ gem 'draper'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'geocoder'
 
+gem 'mongo'
+
 group :development do
   gem 'quiet_assets'
   gem 'better_errors'

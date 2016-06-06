@@ -1,6 +1,10 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @articles = Article.all.includes(:user)
+  end
+
   # GET /articles/1
   def show
   end

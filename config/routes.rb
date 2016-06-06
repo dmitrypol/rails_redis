@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :articles, only: [:new, :edit]
   end
-  resources :articles, only: [:show, :create, :update, :destroy]
+  resources :articles, only: [:index, :show, :create, :update, :destroy]
   resources :user_import, only: [:index, :create]
   resources :cache, only: [:index, :show]
 

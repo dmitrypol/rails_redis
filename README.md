@@ -3,6 +3,8 @@ demo app for http://redisconference.com/
 
 basic demo Rails app using Redis for caching and background jobs
 
+install ruby and Redis
+
 git pull
 
 bundle
@@ -23,7 +25,7 @@ http://localhost:3000/redis - view stuff in Redis
 
 http://localhost:3000/sidekiq - view your jobs
 
-http://localhost:3000/logs - view logs via logster gem
+http://localhost:3000/logs - view logs via logster gem (data is stored in Redis DB 1)
 
 http://localhost:3000/newrelic - newrelic perf metrics on your code
 
@@ -34,3 +36,5 @@ To run the WeatherService   rails r "WeatherService.new.perform(94158)"
 To run the GithubService   rails r "GithubService.new('dhh').perform"
 
 Also look at index.html.erb, show.html.erb, user.rb, user_decorator.rb, user_serializer.rb and cache_controller.rb
+
+Also use Mongo as a DB to aggregate reporting data (in constrast to Redis).  If you do not have Mongo installed comment out Mongo code in ArticleDailyViewsJob, Article.rb model and articles/show.html.erb.

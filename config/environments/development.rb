@@ -59,4 +59,10 @@ Rails.application.configure do
   MONGO_CLIENT = Mongo::Client.new([ '127.0.0.1:27017' ], database: 'rails_redis')
   ARTICLE_DAILY_VIEWS = MONGO_CLIENT[:article_daily_views]
 
+  config.aws_s3_bucket = 'dmitrypol'
+  AWS_S3_CLIENT = Aws::S3::Client.new(
+    credentials: Aws::Credentials.new(ENV.fetch('AWS_ACCESS_KEY'), ENV.fetch('AWS_SECRET_ACCESS_KEY')),
+    region:'us-west-2'
+  )
+
 end

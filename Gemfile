@@ -77,6 +77,7 @@ gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'geocoder'
 
 gem 'mongo'
+gem 'aws-sdk'
 
 group :development do
   gem 'quiet_assets'

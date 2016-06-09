@@ -1,5 +1,6 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :first_name, :last_name, :email
+  attributes :id, :first_name, :last_name, :email, :name_serialized
+  has_many :articles
 
   def name_serialized
   	# adding class and method names to create unique cache_key

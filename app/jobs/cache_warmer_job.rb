@@ -1,4 +1,4 @@
-class CacheWarmerJob < ActiveJob::Base
+class CacheWarmerJob < ApplicationJob
   queue_as :default
 
   def perform(*args)

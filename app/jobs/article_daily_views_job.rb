@@ -1,4 +1,4 @@
-class ArticleDailyViewsJob < ActiveJob::Base
+class ArticleDailyViewsJob < ApplicationJob
   queue_as :low
 
   # => in real application this will process some kind of input (log file or http request)

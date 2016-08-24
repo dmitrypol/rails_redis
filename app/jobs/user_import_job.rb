@@ -1,4 +1,4 @@
-class UserImportJob < ActiveJob::Base
+class UserImportJob < ApplicationJob
   queue_as :default
   queue_adapter = :sidekiq # => you can customize queue per job
 

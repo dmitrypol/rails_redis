@@ -734,7 +734,7 @@ GEM
     roo (2.7.1)
       nokogiri (~> 1)
       rubyzip (~> 1.1, < 2.0.0)
-    rubyzip (1.2.1)
+    rubyzip (1.3.0)
     rufus-scheduler (3.4.2)
       et-orbi (~> 1.0)
     sass (3.5.5)
@@ -845,7 +845,7 @@ DEPENDENCIES
   redis-namespace
   redis-objects
   roo
-  rubyzip (= 1.2.1)
+  rubyzip (= 1.3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   sidekiq

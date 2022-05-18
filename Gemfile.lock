@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/rails-api/active_model_serializers.git
-  revision: 0b5a540e8d5a469b32e9809364c6d32daab1e6ac
+  remote: https://github.com/rails-api/active_model_serializers.git
+  revision: beeb216fab286537389788349c513264325393ef
   specs:
     active_model_serializers (1.0.0.pre.dev)
 
@@ -660,17 +660,19 @@ GEM
     mail (2.7.0)
       mini_mime (>= 0.1.1)
     mini_mime (1.0.0)
-    mini_portile2 (2.3.0)
+    mini_portile2 (2.8.0)
     minitest (5.11.3)
     mongo (2.5.1)
       bson (>= 4.3.0, < 5.0.0)
     multi_json (1.13.1)
     newrelic_rpm (4.8.0.341)
-    nokogiri (1.8.2)
-      mini_portile2 (~> 2.3.0)
+    nokogiri (1.13.6)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     public_suffix (3.0.2)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
+    racc (1.6.0)
     rack (1.6.9)
     rack-mini-profiler (0.10.7)
       rack (>= 1.2.0)

@@ -51,7 +51,7 @@ gem 'redis'
 gem 'hiredis'
 gem 'readthis'
 gem 'redis-dump'
-gem 'yajl-ruby', '1.3.1'
+gem 'yajl-ruby', '1.4.3'
 gem 'redis-namespace'
 gem 'redis-objects'
 

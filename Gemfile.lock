@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/rails-api/active_model_serializers.git
-  revision: 0b5a540e8d5a469b32e9809364c6d32daab1e6ac
+  remote: https://github.com/rails-api/active_model_serializers.git
+  revision: beeb216fab286537389788349c513264325393ef
   specs:
     active_model_serializers (1.0.0.pre.dev)
 
@@ -810,7 +810,7 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
-    yajl-ruby (1.3.1)
+    yajl-ruby (1.4.3)
     zip (2.0.2)
 
 PLATFORMS
@@ -859,7 +859,7 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
-  yajl-ruby (= 1.3.1)
+  yajl-ruby (= 1.4.3)
   zip
 
 BUNDLED WITH

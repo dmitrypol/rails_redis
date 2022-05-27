@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/rails-api/active_model_serializers.git
-  revision: 0b5a540e8d5a469b32e9809364c6d32daab1e6ac
+  remote: https://github.com/rails-api/active_model_serializers.git
+  revision: beeb216fab286537389788349c513264325393ef
   specs:
     active_model_serializers (1.0.0.pre.dev)
 
@@ -671,7 +671,7 @@ GEM
     public_suffix (3.0.2)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
-    rack (1.6.9)
+    rack (1.6.13)
     rack-mini-profiler (0.10.7)
       rack (>= 1.2.0)
     rack-protection (1.5.5)

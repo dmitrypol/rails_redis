@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/rails-api/active_model_serializers.git
-  revision: 0b5a540e8d5a469b32e9809364c6d32daab1e6ac
+  remote: https://github.com/rails-api/active_model_serializers.git
+  revision: beeb216fab286537389788349c513264325393ef
   specs:
     active_model_serializers (1.0.0.pre.dev)
 
@@ -647,7 +647,7 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
-    jmespath (1.3.1)
+    jmespath (1.6.1)
     jquery-rails (4.3.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
